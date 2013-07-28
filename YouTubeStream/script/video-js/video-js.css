@@ -159,7 +159,7 @@ so you can upgrade to newer versions easier. You can remove all these styles by 
 /* Base UI Component Classes
 -------------------------------------------------------------------------------- */
 @font-face{
-  font-family: 'Roboto', sans-serif;
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
   font-weight: normal;
   font-style: normal;
 }
