@@ -13,6 +13,13 @@
     /************************
     * GENERAL
     ************************/
+    
+    /*
+    * @desc configure the ajax requests for cors
+    */
+    function configureRequests() {
+        $.support.cors = true;
+    }
 
     /*
     * @desc configure the video player
@@ -152,6 +159,7 @@
     }
 
     me.init = function () {
+        configureRequests();
         configureVideoProxy();
         attachEvents();
         initAutocomplete();
