@@ -58,7 +58,7 @@ namespace YouTubeStream
             request.AllowAutoRedirect = true;
             request.Method = @"GET";
             request.ContentType = WebOperationContext.Current.IncomingRequest.ContentType;
-            request.UserAgent = @"Mozilla/5.0 (iPad; U; CPU OS 3_2_1 like Mac OS X; en-us) AppleWebKit/531.21.10 (KHTML, like Gecko) Mobile/7B405";
+            request.UserAgent = @"Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/28.0.1500.72 Safari/537.36";
 
             // the Remote-User header is non-ideal; included for compatibility
             foreach (string each in WebOperationContext.Current.IncomingRequest.Headers)
