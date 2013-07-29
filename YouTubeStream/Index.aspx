@@ -21,7 +21,7 @@
     </div>
     <div>
         <h3 id="currentTitle"></h3>
-        <video id="flowplayer" class="video-js vjs-default-skin" controls width="640" height="390" data-setup="{}">
+        <video id="flowplayer" class="video-js vjs-default-skin" width="640" height="390" data-setup="{}">
         </video>
         <div id="related"></div>
     </div>

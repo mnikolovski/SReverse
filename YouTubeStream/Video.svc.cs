@@ -19,7 +19,7 @@ namespace YouTubeStream
         {
             // configure the response format
             if (WebOperationContext.Current == null) return null;
-            WebOperationContext.Current.OutgoingResponse.ContentType = "video/mp4";
+            WebOperationContext.Current.OutgoingResponse.ContentType = "video/webm";
 
             // decode the stream urls
             var videoUrl = DecodeVideoUrl(v);
@@ -43,7 +43,7 @@ namespace YouTubeStream
         {
             var youtubeUrl = string.Format(@"http://www.youtube.com/watch?v={0}", videoId);
             var videoInfos = DownloadUrlResolver.GetDownloadUrls(youtubeUrl);
-            var videoUrl = videoInfos.Where(x => x.VideoType == VideoType.Mp4).Select(x => x.DownloadUrl).FirstOrDefault();
+            var videoUrl = videoInfos.Where(x => x.VideoType == VideoType.WebM).Select(x => x.DownloadUrl).FirstOrDefault();
             return videoUrl;
         }
 

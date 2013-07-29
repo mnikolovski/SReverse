@@ -26,8 +26,9 @@
     */
     function configureVideoProxy() {
         if (!videojs) return;
-        videojs.options.flash.swf = "script/video-js/video-js.swf";
-        myPlayer = videojs("flowplayer", { "controls": false, "autoplay": true, "preload": "auto", playerFallbackOrder: ["flash", "html5", "links"] });
+        _V_.options.techOrder = ["html5"];
+        _V_.options.flash.swf = "script/video-js/video-js.swf";
+        myPlayer = videojs("flowplayer", { "controls": true, "autoplay": true, "preload": "auto", playerFallbackOrder: ["flash", "html5", "links"] });
     };
 
     /*
@@ -115,7 +116,7 @@
         // load the url in the player
         var videoId = utl.getQueryStringParameter(data.link[0].href, 'v');
         var videoUrl = proxyUrl + videoId;
-        myPlayer.src({ type: "video/mp4", src: videoUrl });
+        myPlayer.src({ type: "video/webm", src: videoUrl });
         myPlayer.play();
     };
 
